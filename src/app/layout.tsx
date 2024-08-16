@@ -1,12 +1,11 @@
 import '@/styles/globals.css'
 
 import { GeistMono } from 'geist/font/mono'
-import { type Metadata } from 'next'
-
-import { TRPCReactProvider } from '@/trpc/react'
+import localFont from 'next/font/local'
+import { ThemeProvider } from '@/components/providers/theme-provider'
 import { cn } from '@/lib/utils'
 
-import localFont from 'next/font/local'
+import { type Metadata } from 'next'
 
 const interVariable = localFont({
   variable: '--font-sans',
@@ -33,7 +32,7 @@ export default function RootLayout({
       )}
     >
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   )

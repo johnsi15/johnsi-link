@@ -1,9 +1,10 @@
 import '@/styles/globals.css'
 
+import { ThemeProvider } from '@/components/providers/theme-provider'
 import { GeistMono } from 'geist/font/mono'
 import localFont from 'next/font/local'
-import { ThemeProvider } from '@/components/providers/theme-provider'
 import { cn } from '@/lib/utils'
+import { Header } from '@/components/layout/Header'
 
 import { type Metadata } from 'next'
 
@@ -29,18 +30,19 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
-      lang="en"
+      lang='en'
       className={cn(
         `font-sans ${interVariable.variable} ${GeistMono.variable} min-h-screen antialiased`,
       )}
     >
       <body>
         <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
+          attribute='class'
+          defaultTheme='system'
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
         </ThemeProvider>
       </body>

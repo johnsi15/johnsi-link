@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { GitHub } from '../icons/Logos'
 import { LinkToExternal } from '../ui/LinkToExternal'
 import { buttonVariants } from '../ui/button'
+import { ToggleTheme } from '../ToggleTheme'
 
 export function Header() {
   return (
@@ -41,7 +42,8 @@ export function Header() {
             <GitHub width={20} name='GitHub Repository' />
           </LinkToExternal>
 
-          {/* <ModeToggle />
+          <ToggleTheme />
+          {/*
           <UserButton /> */}
         </div>
       </div>

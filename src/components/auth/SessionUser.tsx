@@ -13,10 +13,10 @@ import { SignOut } from '@/components/auth/SignOut'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
-export default async function UserButton() {
+export async function SessionUser() {
   const session = await auth()
 
-  if (!session?.user)
+  if (!session?.user) {
     return (
       <Link
         href='/dashboard'
@@ -29,8 +29,9 @@ export default async function UserButton() {
         <ArrowRight className='ml-2 h-4 w-4 transform transition-transform group-hover:translate-x-[2px]' />
       </Link>
     )
+  }
 
-  if (session?.user)
+  if (session?.user) {
     return (
       <DropdownMenu>
         <DropdownMenuTrigger
@@ -61,4 +62,5 @@ export default async function UserButton() {
         </DropdownMenuContent>
       </DropdownMenu>
     )
+  }
 }

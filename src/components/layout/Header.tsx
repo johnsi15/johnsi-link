@@ -1,9 +1,10 @@
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import { GitHub } from '../icons/Logos'
-import { LinkToExternal } from '../ui/LinkToExternal'
-import { buttonVariants } from '../ui/button'
-import { ToggleTheme } from '../ToggleTheme'
+import { GitHub } from '@/components/icons/Logos'
+import { LinkToExternal } from '@/components/ui/LinkToExternal'
+import { buttonVariants } from '@/components/ui/button'
+import { ToggleTheme } from '@/components/ToggleTheme'
+import { SessionUser } from '@/components/auth/SessionUser'
 
 export function Header() {
   return (
@@ -44,8 +45,7 @@ export function Header() {
           </LinkToExternal>
 
           <ToggleTheme />
-          {/*
-          <UserButton /> */}
+          <SessionUser />
         </div>
       </div>
     </nav>

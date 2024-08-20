@@ -13,7 +13,7 @@ export function Header() {
         'flex w-full',
         'pb-3 pt-4 lg:px-4',
         'sticky top-0 z-50',
-        'bg-white dark:bg-emerald-600',
+        'bg-white dark:bg-green-600',
         'rounded-none border-y bg-white p-4 shadow-sm dark:border-neutral-800',
       )}
     >

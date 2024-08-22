@@ -17,6 +17,7 @@ const config = {
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-unsafe-call': 'off',
+    'react/no-unescaped-entities': 'off',
     '@typescript-eslint/consistent-type-imports': [
       'warn',
       {

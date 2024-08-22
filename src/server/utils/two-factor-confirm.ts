@@ -1,4 +1,4 @@
-import { db } from '../db'
+import { db } from '@/server/db'
 
 export const getTwoFactorConfirmationByUserId = async (userId: string) => {
   try {
@@ -7,6 +7,7 @@ export const getTwoFactorConfirmationByUserId = async (userId: string) => {
     })
     return twoFactorConfirmation
   } catch (error) {
+    console.log('This is error two factor confirmation')
     return null
   }
 }
